@@ -8,6 +8,10 @@ public class ArrayInteri {
         this.arrayDiInteri = arrayDiInteri;
     }
 
+    public ArrayInteri (){
+        arrayDiInteri = new int[0];
+    }
+
 
     public int getElementoSuccessivo () {
 
@@ -28,7 +32,15 @@ public class ArrayInteri {
 
     public boolean hasAncoraElementi(){
 
-        return index < arrayDiInteri.length - 1;
+        if (this.arrayDiInteri.length == 0) {
+
+            return false;
+            
+        }else {
+
+            return index < arrayDiInteri.length;
+
+        }        
 
     }
 
@@ -44,6 +56,10 @@ public class ArrayInteri {
 
        arrayDiInteri = nuovoArray;
 
+    }
+
+    public int getIndice(){
+        return index;
     }
     
 }
